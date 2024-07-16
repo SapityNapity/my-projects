@@ -13,17 +13,17 @@ int main(){
             printf("\nguess the number you have 3 guesses:");
             scanf("%d", &guess);
             guesscount++;
-                if(guess < secretnumber){
-                printf("the secret number is higher than the one you provided.");
+                if(guess < secretnumber && guess < 0){
+                printf("the secret number is higher than the one you provided, and please stay above 0");
                 }
-                else if(guess > secretnumber){
-                    printf("the secret number is lower than the one you provided");
+                else if(guess > secretnumber && guess > 20){
+                    printf("the secret number is lower than the one you provided, and please stay below 20");
                 }
                 }
                 else{}
             }
                 if(guess != secretnumber){
-            printf("out of guesses");
+            printf("\nout of guesses");
         }
         else{
             printf("you win");
