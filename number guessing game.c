@@ -9,25 +9,30 @@ int main(){
     int hint;
 
     while(guess != secretnumber && guesscount < guesslimit){
-        if(guesscount != guesslimit){
-            printf("\nguess the number you have 3 guesses:");
+            printf("\nguess the number you have %d guesses:", guesslimit - guesscount);
             scanf("%d", &guess);
-            guesscount++;
-                if(guess < secretnumber && guess < 0){
-                printf("the secret number is higher than the one you provided, and please stay above 0");
+
+                if(guess < 0 || guess > 20){
+                printf("please stay between 1 to 20.");
+                continue;
                 }
-                else if(guess > secretnumber && guess > 20){
-                    printf("the secret number is lower than the one you provided, and please stay below 20");
-                }
-                }
-                else{}
-            }
-                if(guess != secretnumber){
+
+                guesscount++;
+
+
+                if(guess < secretnumber) {
+            printf("The secret number is higher than your guess.\n");
+        } else if(guess > secretnumber) {
+            printf("The secret number is lower than your guess.\n");
+        }
+        }
+             if(guess != secretnumber){
             printf("\nout of guesses");
         }
-        else{
-            printf("you win");
+        else {
+            printf("You win!\n");
         }
         getch();
+            }
 
-        }
+
