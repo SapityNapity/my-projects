@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(){
+    double fahrenheit, celsius;
+    printf("give a number which you want to turn to celsius. (in fahrenheit): ");
+    scanf("%lf", &fahrenheit);
+    celsius = (fahrenheit - 32) * 5 / 9;
+    printf("The temperature in celsius is: %.2f\n", celsius);
+
+    printf("Press ENTER to exit!");
+    getchar();
+    getchar();
+}
