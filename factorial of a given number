@@ -1,0 +1,14 @@
+/*  Write a program to calculate the factorial of a given number.
+    Practice using loops and understand the concept of iterative multiplication.     */
+#include <stdio.h>
+int main(){
+    int numbers;
+    int result = 1;
+    printf("enter a number you want a factorial of: ");
+    scanf("%d", &numbers);
+    for(int i = 1; i <= numbers; i++){
+        result *= i;
+    }
+    printf("%d! is %d", numbers, result);
+}
+
