@@ -19,22 +19,23 @@ int main(){
             while(strcmp(userchoice, "rock") != 0 && strcmp(userchoice, "paper") != 0 && strcmp(userchoice, "scissors") !=0){
                 printf("Invalid input, Please input 'rock', 'paper', 'scissors'.\n");
                 printf("Enter your move (rock/ paper/ scissors): ");
+                while((getchar() != '\n'));
                 scanf("%s", userchoice);
             }
         if(strcmp(userchoice, "rock") == 0 && strcmp(computerchoice, "scissors") == 0){
-            printf("You win\n");
+            printf("You win.\nThe computer's choice was %s\n", computerchoice);
         }
         else if(strcmp(userchoice, "paper") == 0 && strcmp(computerchoice, "rock") ==0){
-            printf("You win\n");
+            printf("You win.\nThe computer's choice was %s\n", computerchoice);
         }
         else if(strcmp(userchoice, "scissors") == 0 && strcmp(computerchoice, "paper") ==0){
-            printf("You win\n");
+            printf("You win.\nThe computer's choice was %s\n", computerchoice);
         }
         else if(strcmp(userchoice, computerchoice) == 0){
-            printf("It's a tie\n");
+            printf("It's a tie.\nThe computer's choice was %s\n", computerchoice);
         }
         else{
-                printf("You lose, the computer's choice was %s\n", computerchoice);
+                printf("You lose. \nthe computer's choice was %s\n", computerchoice);
             }
 
             printf("Do you want to continue(y/n): ");
