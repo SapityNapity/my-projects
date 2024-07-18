@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int initialNum, endingNum, end;
+    printf("Enter the number you want the table to start from: ");
+    scanf("%d", &initialNum);
+    printf("Enter the number you want to table to end to: ");
+    scanf("%d", &endingNum);
+    for(int i = 1; i <= endingNum; i++)
+        {
+            end = initialNum * i;
+            printf("%d multiplied by %d is = %d\n", initialNum, i, end);
+        }
+}
